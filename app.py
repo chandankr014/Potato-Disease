@@ -6,6 +6,8 @@ from io import BytesIO
 import tensorflow as tf
 from fastapi.templating import Jinja2Templates
 
+import os
+os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = 'python'
 
 app = FastAPI()
 
