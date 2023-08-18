@@ -1,0 +1,10 @@
+.venv
+venv/
+venv
+
+.env
+env
+
+.dockerignore
+.ipynb_checkpoint
+__pycache__
