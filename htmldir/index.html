@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to FastAPI WebApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .predict-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .predict-button:hover {
+            background-color: #0056b3;
+        }
+
+        .image-preview {
+            display: none;
+            max-width: 100%;
+            height: auto;
+            margin-top: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #image-label {
+            cursor: pointer;
+            color: #007bff;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        #image-label:hover {
+            color: #0056b3;
+        }
+        .about-button {
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-right: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .about-button:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to FastAPI WebApp</h1>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>Potato Disease Prediction</h2>
+            <p>This is the homepage of our FastAPI web application. We are excited to showcase our latest projects and developments in the field of data science.</p>
+            
+            <!-- Image Upload Form -->
+            <form action="/predict" method="post" enctype="multipart/form-data">
+                <label for="image">Upload an Image:</label>
+                <input type="file" id="image" name="file" accept="image/*">
+                <button type="submit" class="predict-button">Upload</button>
+                <img id="image-preview" class="image-preview" src="#" alt="Uploaded Image">
+            </form>
+
+        </div>
+   
+        <a href="/about" class="about-button">About This App</a>
+    </div>
+    <div class="footer">
+        <p>&copy; 2023 FastAPI WebApp | Designed by Chandan</p>
+    </div>
+
+    <!-- JAVASCRIPT CODES -->
+    <script>
+        const imageInput = document.getElementById('image');
+        const imagePreview = document.getElementById('image-preview');
+        const imageLabel = document.getElementById('image-label');
+
+        imageInput.addEventListener('change', function() {
+            const selectedFile = imageInput.files[0];
+            if (selectedFile) {
+                imagePreview.style.display = 'block';
+                imagePreview.src = URL.createObjectURL(selectedFile);
+                imageLabel.textContent = 'Change Image';
+            }
+        });
+    </script>
+</body>
+</html>

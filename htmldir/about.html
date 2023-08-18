@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Potato Disease Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .condition-list {
+            list-style-type: disc;
+            padding-left: 2em;
+        }
+
+        .condition-list li {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .condition-list li:hover::before {
+            content: attr(data-tooltip);
+            /* top: -3.5em; */
+            background-color: #d6ec8698;
+            color: #000000;
+            padding: 1.5em;
+            border-radius: 5px;
+            /* display: inline-block; */
+            white-space: nowrap;
+            /* z-index: 1; */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Potato Disease Prediction</h1>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>Project Description</h2>
+            <p>Welcome to the Potato Disease Prediction project! This project aims to utilize data science and machine learning techniques to predict diseases in potato plants. Potatoes are vulnerable to various diseases that can significantly impact crop yield and quality. Early detection of these diseases is crucial for effective disease management and prevention.</p>
+            
+            <p>Our project uses advanced image processing algorithms and machine learning models to analyze images of potato leaves and identify signs of disease. By training the model on a diverse dataset of healthy and diseased potato plants, we can create a reliable tool for farmers and researchers to predict and address potential disease outbreaks.</p>
+            
+            <div class="container">
+                <h2>Potato Plant Conditions</h2>
+                <ul class="condition-list">
+                    <li data-tooltip="Early Blight: A fungal disease that affects potato plants.">Early Blight</li>
+                    <li data-tooltip="Healthy: Potato plants without any visible signs of disease.">Healthy</li>
+                    <li data-tooltip="Late Blight: Another fungal disease that can cause severe damage to potato crops.">Late Blight</li>
+                </ul>
+            </div>
+
+            <p>Feel free to explore our web application, where you can upload images of potato leaves to get predictions about potential diseases. Our goal is to empower farmers with accurate and timely information, helping them make informed decisions and safeguard their potato crops.</p>
+            
+            <a href="/" class="button">Try It Now</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 Potato Disease Prediction | Designed by Your Name</p>
+    </div>
+</body>
+</html>
