@@ -48,6 +48,6 @@ tensorflow-io-gcs-filesystem
 termcolor
 typing_extensions==4.7.1
 urllib3==1.26.16
-uvicorn==0.23.2
+uvicorn==0.22.0
 Werkzeug==2.3.7
 wrapt==1.15.0
