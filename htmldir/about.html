@@ -15,11 +15,15 @@
             color: #fff;
             text-align: center;
             padding: 1em;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
 
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 80px auto 0 auto;
             padding: 2em;
         }
 
@@ -35,6 +39,9 @@
             padding: 1em;
             background-color: #333;
             color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
 
         .button {
@@ -45,11 +52,13 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            text-decoration: none;
         }
 
         .button:hover {
             background-color: #0056b3;
         }
+
         .condition-list {
             list-style-type: disc;
             padding-left: 2em;
@@ -62,14 +71,15 @@
 
         .condition-list li:hover::before {
             content: attr(data-tooltip);
-            /* top: -3.5em; */
             background-color: #d6ec8698;
-            color: #000000;
+            color: #000;
             padding: 1.5em;
             border-radius: 5px;
-            /* display: inline-block; */
             white-space: nowrap;
-            /* z-index: 1; */
+            position: absolute;
+            left: 0;
+            top: -2.5em;
+            z-index: 1;
         }
     </style>
 </head>
@@ -85,7 +95,7 @@
             
             <p>Our project uses advanced image processing algorithms and machine learning models to analyze images of potato leaves and identify signs of disease. By training the model on a diverse dataset of healthy and diseased potato plants, we can create a reliable tool for farmers and researchers to predict and address potential disease outbreaks.</p>
             
-            <div class="container">
+            <div>
                 <h2>Potato Plant Conditions</h2>
                 <ul class="condition-list">
                     <li data-tooltip="Early Blight: A fungal disease that affects potato plants.">Early Blight</li>
